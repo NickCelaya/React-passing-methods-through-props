@@ -15,14 +15,15 @@ class App extends Component {
     }
   }
 
-
+  
    getData = async () => {
     let response = await axios.get("https://swapi.co/api/"+this.state.inputValue)
     this.setState({
-      stuff: response.data.results
+      stuff:  response.data.results
     })
     console.log(this.state.inputValue && this.state.stuff)
   }
+
 
   receiveInput = (event) => {
     this.setState({
@@ -30,10 +31,10 @@ class App extends Component {
     })
   }
 
-  // addToList = (event) => {     //// create array in state and push names to it with click event
+  // addToList = (event) => {     //// create array & inputValue2 in state and push names to it with click event
   //   this.setState({
-  //     TEST1: this.state.someArray.concat([event.target.value]),
-  //     TEST: [...this.state.someArray, ...event.target.value]
+  //     array: this.state.array.concat([event.target.value]) + this.state.inputValue2,
+  //    array: [...this.state.array, ...event.target.value]+this.state.inputValue2
   //   })
   // }
 
@@ -49,6 +50,7 @@ class App extends Component {
       )
     })
     console.log(this.state.inputValue, `value changing`)
+   
 
     return (
       <div className="App">
@@ -69,7 +71,7 @@ class App extends Component {
           <br />
           <h3>{data[0]}</h3>
           <br />
-
+          
           <NickTest incomingValue={this.state.inputValue} starwars={this.state.stuff} />
 
         </div>
@@ -79,3 +81,4 @@ class App extends Component {
 }
 
 export default App;
+

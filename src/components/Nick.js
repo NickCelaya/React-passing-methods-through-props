@@ -52,6 +52,7 @@ render(){
                 <h3>This is the value from app passing value as props:{this.props.incomingValue}</h3>
 
                 <h4>this is is stuff array from app state: { WAR }</h4>
+                <h1>{ WAR[1] }</h1>
 
             <h3 className = "words" onClick={ this.changer }>Soooo...What is your name? {this.state.name}</h3>
         </div>
