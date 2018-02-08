@@ -55,6 +55,8 @@ render(){
                 <h1>{ WAR[1] }</h1>
 
             <h3 className = "words" onClick={ this.changer }>Soooo...What is your name? {this.state.name}</h3>
+            <i className="material-icons">attach_money</i>
+            <i class="material-icons">content_cut</i>
         </div>
 
     )
